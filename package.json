@@ -1,0 +1,24 @@
+{
+  "name": "salesforce-playwright-poc",
+  "version": "1.0.0",
+  "description": "Production-grade Salesforce E2E test automation POC using Playwright",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:lead": "npx playwright test tests/lead.spec.js",
+    "test:opportunity": "npx playwright test tests/opportunity.spec.js",
+    "test:smoke": "npx playwright test --grep @smoke",
+    "test:regression": "npx playwright test --grep @regression",
+    "test:headed": "npx playwright test --headed",
+    "test:debug": "npx playwright test --debug",
+    "test:ui": "npx playwright test --ui",
+    "report": "npx playwright show-report reports/html",
+    "setup": "npx playwright install chromium"
+  },
+  "dependencies": {
+    "@playwright/test": "^1.49.0",
+    "dotenv": "^16.4.5"
+  },
+  "keywords": ["salesforce", "playwright", "e2e", "automation"],
+  "author": "",
+  "license": "ISC"
+}
